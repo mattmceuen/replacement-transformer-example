@@ -1,0 +1,6 @@
+resources:
+  - ../../composite/openstack
+  - endpoint-catalogue.yaml
+
+transformers:
+  - replacements.yaml

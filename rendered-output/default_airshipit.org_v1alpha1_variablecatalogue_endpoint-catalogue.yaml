@@ -1,0 +1,16 @@
+apiVersion: airshipit.org/v1alpha1
+kind: VariableCatalogue
+metadata:
+  labels: airshipit.org/deploy=false
+  name: endpoint-catalogue
+spec:
+  osh:
+    volume:
+      host_fqdn_override:
+        default: null
+        public:
+          host: volume-sw.ci.airshipit.org
+      hosts:
+        default: cinder-api
+        public: cinder
+      name: cinder

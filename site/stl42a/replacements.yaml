@@ -1,0 +1,19 @@
+apiVersion: someteam.example.com/v1
+kind: ReplacementTransformer
+metadata:
+  name: notImportantHere
+replacements:
+- source:
+    objref:
+      apiversion: airshipit.org/v1alpha1
+      kind: VariableCatalogue
+      name: endpoint-catalogue-site
+    fieldref: spec.osh.volume
+  target:
+    objref:
+      apiversion: airshipit.org/v1alpha1
+      kind: ArmadaChart
+      name: cinder
+    fieldrefs:
+    - values.endpoints.volume
+

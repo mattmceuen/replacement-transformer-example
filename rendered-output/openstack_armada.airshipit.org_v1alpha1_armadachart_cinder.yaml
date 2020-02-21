@@ -1,0 +1,22 @@
+apiVersion: armada.airshipit.org/v1alpha1
+kind: ArmadaChart
+metadata:
+  name: cinder
+  namespace: openstack
+spec:
+  namespace: openstack
+  release: cinder
+  values:
+    pod:
+      replicas:
+        api: 2
+        volume: 2
+  wait:
+    labels:
+      release_group: airship-cinder
+    timeout: 900
+values:
+  endpoints:
+    volume:
+      host_fqdn_override:
+        host: volume-5g.stl42a.fastest5g.com

@@ -1,0 +1,6 @@
+resources:
+  - ../../function/cinder
+  - endpoint-catalogue.yaml
+
+transformers:
+  - replacements.yaml

@@ -1,0 +1,10 @@
+apiVersion: airshipit.org/v1alpha1
+kind: VariableCatalogue
+metadata:
+  labels: airshipit.org/deploy=false
+  name: endpoint-catalogue-site
+spec:
+  osh:
+    volume:
+      host_fqdn_override:
+        host: volume-5g.stl42a.fastest5g.com

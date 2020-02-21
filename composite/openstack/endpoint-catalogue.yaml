@@ -1,0 +1,22 @@
+apiVersion: airshipit.org/v1alpha1
+kind: VariableCatalogue
+metadata:
+  name: endpoint-catalogue
+  labels:
+    airshipit.org/deploy=false
+spec:
+  osh:
+    volume:
+      name: cinder
+      hosts:
+        default: cinder-api
+        public: cinder
+      host_fqdn_override:
+        default: null
+        public:
+          # Note: recursive substitution required
+          # to satisfy this embedded value
+          # The plugin does not have this functionality
+          #host: volume-sw.DOMAIN
+          host: volume-sw.ci.airshipit.org
+

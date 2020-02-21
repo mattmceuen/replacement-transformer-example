@@ -1,0 +1,18 @@
+apiVersion: airshipit.org/v1alpha1
+kind: VariableCatalogue
+metadata:
+  name: endpoint-catalogue-site
+  labels:
+    airshipit.org/deploy=false
+spec:
+  osh:
+    volume:
+      host_fqdn_override:
+          # Override this single downstream-specific value
+          # At composite level, it's: volume-sw.ci.airshipit.org
+          # NOTE: this is where substring substitution/interpolation
+          # is important; the "volume-5g" part of the string would
+          # ideally be defined at a higher level, with the site-specific
+          # domain alone defined here.
+          host: volume-5g.stl42a.fastest5g.com
+
